@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /root/
+Disallow: /Upload/
+Disallow: /db/
+Disallow: /assets/

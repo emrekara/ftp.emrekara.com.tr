@@ -1,0 +1,6 @@
+[10-Apr-2016 21:39:07 Europe/Istanbul] PHP Fatal error:  Cannot use object of type PDOStatement as array in /home/emrekara/public_html/sistem/fonksiyon.php on line 118
+[10-Apr-2016 21:50:16 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on boolean in /home/emrekara/public_html/sistem/fonksiyon.php on line 117
+[10-Apr-2016 21:50:22 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on boolean in /home/emrekara/public_html/sistem/fonksiyon.php on line 117
+[10-Apr-2016 21:50:24 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on boolean in /home/emrekara/public_html/sistem/fonksiyon.php on line 117
+[10-Apr-2016 21:52:56 Europe/Istanbul] PHP Fatal error:  Cannot use object of type PDOStatement as array in /home/emrekara/public_html/sistem/fonksiyon.php on line 118
+[10-Apr-2016 21:53:24 Europe/Istanbul] PHP Fatal error:  Cannot use object of type PDOStatement as array in /home/emrekara/public_html/sistem/fonksiyon.php on line 118

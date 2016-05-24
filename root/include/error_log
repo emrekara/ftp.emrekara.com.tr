@@ -1,0 +1,2 @@
+[30-Mar-2016 10:43:04 Europe/Istanbul] PHP Notice:  Undefined variable: db in /home/emrekara/public_html/root/include/ayarlar.php on line 2
+[30-Mar-2016 10:43:04 Europe/Istanbul] PHP Fatal error:  Call to a member function query() on null in /home/emrekara/public_html/root/include/ayarlar.php on line 2
