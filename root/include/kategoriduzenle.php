@@ -205,7 +205,6 @@ if ($_POST["kayitguncelle"]) {
                 <label  class="col-sm-2 control-label">Kategori</label>
                 <div class="col-sm-10">
                   <select aria-hidden="true" tabindex="-1" class="form-control select2 select2-hidden-accessible" name="kategori_ustId" style="width: 100%;">
-                    <option selected="selected" value="0">Ana Kategori</option>
                       <?php echo kategorisecili($db,$id); ?>
                   </select>
                 </div>

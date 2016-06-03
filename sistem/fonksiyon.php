@@ -23,6 +23,13 @@ function seflink($string){
   $string = str_replace(' ', '-', $string);
   return $string;
 }
+function git($par, $time = 0){
+	if($time == 0){
+		header("Location: {$par}");
+	}else{
+		header("Refresh: {$time}; url={$par}");
+	}
+}
 function curlKullan($url) {
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $url);
@@ -129,6 +136,18 @@ function analitik_hit($db,$analitik_ip){
     }else{
         return 0;
     }
+}
+function analitikhitdondur($db,$id){
+  $hit=$db->query("SELECT * FROM analitik WHERE analitik_id=$id order by analitik_hit desc limit 0,1")->fetch(PDO::FETCH_ASSOC);
+  if ($hit) {
+    return $hit["analitik_hit"];
+  }
+}
+function analitikdegerdondur($db,$id,$column){
+  $deger=$db->query("SELECT * FROM analitik WHERE analitik_id=$id")->fetch(PDO::FETCH_ASSOC);
+  if ($deger) {
+    return $deger[$column];
+  }
 }
 function girisKayit($db){
     $analitik_ip=  GetIP();
@@ -245,6 +264,12 @@ function kategorisecili($db,$id){
         }
         echo '>'.$row["kategori_adi"].'</option>';
     }
+  }
+}
+function yazikategoriadi($db,$id){
+  $query=$db->query("SELECT * FROM kategoriler WHERE kategori_id=$id")->fetch(PDO::FETCH_ASSOC);
+  if ($query) {
+    return seflink($query["kategori_adi"]);
   }
 }
 function kategorisorgula($db,$isim){
@@ -424,8 +449,15 @@ function anasayfakategorilistele($db){
     }
   }
 }
-function anasayfayazilistele($db){
-  $yazilar=$db->query("SELECT * FROM yazilar WHERE yazi_durum=1 ORDER BY yazi_kayitTarihi desc",PDO::FETCH_ASSOC);
+function anasayfayazilistele($db,$kategori_link){
+  //echo '<script type="text/javascript">alert("1");</script>';
+  $sorgu="SELECT * FROM yazilar WHERE yazi_durum=1 ";
+  if ($kategori_link) {
+    $sorgu.="and yazi_kategori_link='$kategori_link' ";
+  }
+  $sorgu.="ORDER BY yazi_kayitTarihi desc";
+
+  $yazilar=$db->query("$sorgu",PDO::FETCH_ASSOC);
   if ($yazilar->rowCount()) {
     foreach ($yazilar as $row) {
       $kullanici_avatar=kullanici($db,$row["yazi_yazarId"],"kullanici_avatar");
@@ -434,7 +466,7 @@ function anasayfayazilistele($db){
       echo
       '
       <div class="blog row">
-      <div class="col-md-2">
+      <div class="hiddex-xs col-md-2">
       <img src="img/Avatar/Thumb/'.$kullanici_avatar.'" alt="'.ayarlar($db,"ayar_title").'" class="w100 img-responsive img-square blog-profil"/>
       </div>
       <div class="col-md-10 blog-yazi ">
@@ -474,9 +506,10 @@ function anasayfayazilistele($db){
       </div>
       </div>
       </div>
-
       ';
     }
+  }else{
+    require_once("404.php");
   }
 }
 function sayfaiceriklistele($db,$sayfa_link){
@@ -524,16 +557,16 @@ function sayfaiceriklistele($db,$sayfa_link){
 function analitiklistele($db){
     $query=$db->query("SELECT * FROM analitik order by analitik_id desc ",PDO::FETCH_ASSOC);
   if ($query->rowCount()) {
-    foreach ($query as $row) {      
+    foreach ($query as $row) {
       echo '<tr>';
       echo
       '
-      <td>'.$row["analitik_ip"].'</td>
+      <td><span class="analitik_ip pointer" title="'.$row["analitik_ip"].'">'.$row["analitik_ip"].'</span></td>
       <td>'.$row["analitik_tarayici"].'</td>
       <td>'.$row["analitik_hit"].'</td>
       <td>'.$row["analitik_kayitTarihi"].'</td>
       <td>
-      <a href="main.php?sayfa=analitikduzenle&id='.$row["analitik_id"].'"><i class="fa fa-pencil"></i></a>
+      <span class="Forward pointer" title="'.$row["analitik_id"].'"><i class="fa fa-pencil"></i></span>
       <a href="main.php?sayfa=sil&sil=analitik_sil&id='.$row["analitik_id"].'" onclick="return confirmDel();"><i class="fa fa-trash"></i></a>
       </td>
       ';

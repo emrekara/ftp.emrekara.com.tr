@@ -39,7 +39,8 @@ require_once("sistem/ayar.php");
     <div class="row">
       <div class="col-md-9">
       <?php
-      echo anasayfayazilistele($db);
+      $kategori_link=g("kategori_link");
+      echo anasayfayazilistele($db,$kategori_link);
       ?>
       </div>
       <div class="col-md-3">

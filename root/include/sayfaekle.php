@@ -7,7 +7,7 @@ if ($_POST["kayitet"]) {
   $sayfa_link                    = seflink($sayfa_adi);
   $sayfa_description             = p("sayfa_description");
   $sayfa_keyword                 = p("sayfa_keyword");
-  $sayfa_icerik                  = addslashes(trim(p("sayfa_icerik")));
+  $sayfa_icerik                  = p("sayfa_icerik");
   $tarih                         = date("Ymd-His");
   $sayfa_kayitTarihi             = date("Y-m-d H:i:s");
   $sayfa_iconResmi               = $_FILES["sayfa_icon"]["tmp_name"];

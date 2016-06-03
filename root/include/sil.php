@@ -120,6 +120,22 @@ if($sil=="uye_sil"){
 
   }
 }
-
+if ($sil=="analitik_sil") {
+  $id=g("id");
+  if (!$id) {
+    go("main.php");
+  }else{
+    $delete=$db->prepare("DELETE FROM analitik WHERE analitik_id= :id");
+    $delete2=$delete->execute(array(
+      'id'=>$id
+    ));
+    if ($delete2) {
+      echo 'Analitik Bilgisi Silindi.';
+      header("Refresh:2; url=main.php?sayfa=analitik");
+    }else{
+      echo 'Analitik kaydı silinirken bir hata oluştu.';
+    }
+  }
+}
 
 ?>

@@ -13,6 +13,7 @@ if ($_POST["kayitguncelle"]) {
   require('class.upload.php');
   $yazi_yazarId                 = $_SESSION["kullanici_id"];
   $yazi_kategori                = p("yazi_kategori");
+  $yazi_kategori_link           = yazikategoriadi($db,$yazi_kategori);
   $yazi_adi                     = p("yazi_adi");
   $yazi_link                    = seflink($yazi_adi);
   $yazi_description             = p("yazi_description");
@@ -65,6 +66,7 @@ if ($_POST["kayitguncelle"]) {
         if ($image->processed) {
           $query=$db->prepare("UPDATE yazilar SET
             yazi_kategori = ?,
+            yazi_kategori_link = ?,
             yazi_adi = ?,
             yazi_yazarId = ?,
             yazi_link = ?,
@@ -78,6 +80,7 @@ if ($_POST["kayitguncelle"]) {
             ");
             $insert=$query->execute(array(
               $yazi_kategori,
+              $yazi_kategori_link,
               $yazi_adi,
               $yazi_yazarId,
               $yazi_link,
@@ -135,6 +138,7 @@ if ($_POST["kayitguncelle"]) {
     }else{
       $query=$db->prepare("UPDATE yazilar SET
         yazi_kategori = ?,
+        yazi_kategori_link = ?,
         yazi_adi = ?,
         yazi_yazarId = ?,
         yazi_link = ?,
@@ -147,6 +151,7 @@ if ($_POST["kayitguncelle"]) {
         ");
         $insert=$query->execute(array(
           $yazi_kategori,
+          $yazi_kategori_link,
           $yazi_adi,
           $yazi_yazarId,
           $yazi_link,

@@ -1,2 +1,28 @@
-[30-Mar-2016 10:43:04 Europe/Istanbul] PHP Notice:  Undefined variable: db in /home/emrekara/public_html/root/include/ayarlar.php on line 2
-[30-Mar-2016 10:43:04 Europe/Istanbul] PHP Fatal error:  Call to a member function query() on null in /home/emrekara/public_html/root/include/ayarlar.php on line 2
+[12-May-2016 21:04:37 Europe/Istanbul] PHP Notice:  Undefined variable: db in /home/emrekara/public_html/root/include/ayarlar.php on line 2
+[12-May-2016 21:04:37 Europe/Istanbul] PHP Fatal error:  Call to a member function query() on a non-object in /home/emrekara/public_html/root/include/ayarlar.php on line 2
+[24-May-2016 13:24:09 Europe/Istanbul] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/emrekara/public_html/sistem/fonksiyon.php on line 141
+[24-May-2016 13:24:15 Europe/Istanbul] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/emrekara/public_html/sistem/fonksiyon.php on line 141
+[24-May-2016 16:27:50 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 59
+[24-May-2016 16:29:28 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 59
+[24-May-2016 16:46:46 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 59
+[24-May-2016 16:49:38 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 59
+[24-May-2016 16:51:50 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 60
+[24-May-2016 16:53:01 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 60
+[24-May-2016 16:54:03 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 60
+[24-May-2016 16:59:14 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61
+[24-May-2016 16:59:59 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61
+[24-May-2016 17:01:55 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61
+[24-May-2016 17:03:19 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 11
+[24-May-2016 17:06:55 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 62
+[24-May-2016 17:08:08 Europe/Istanbul] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 10
+[24-May-2016 17:08:19 Europe/Istanbul] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 10
+[24-May-2016 17:08:32 Europe/Istanbul] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 10
+[24-May-2016 17:12:15 Europe/Istanbul] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 10
+[24-May-2016 17:15:41 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61
+[24-May-2016 17:17:43 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61
+[24-May-2016 17:19:14 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61
+[24-May-2016 17:21:15 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61
+[24-May-2016 17:24:29 Europe/Istanbul] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 10
+[24-May-2016 17:25:44 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61
+[24-May-2016 17:25:45 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61
+[24-May-2016 17:57:31 Europe/Istanbul] PHP Fatal error:  Call to a member function rowCount() on a non-object in /home/emrekara/public_html/root/include/controller.php on line 61

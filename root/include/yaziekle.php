@@ -3,6 +3,7 @@ if ($_POST["kayitet"]) {
   require('class.upload.php');
   $yazi_yazarId                 = $_SESSION["kullanici_id"];
   $yazi_kategori                = p("yazi_kategori");
+  $yazi_kategori_link           = yazikategoriadi($db,$yazi_kategori);
   $yazi_adi                     = p("yazi_adi");
   $yazi_link                    = seflink($yazi_adi);
   $yazi_description             = p("yazi_description");
@@ -56,6 +57,7 @@ if ($_POST["kayitet"]) {
           if ($image->processed) {
             $query=$db->prepare("INSERT INTO yazilar SET
               yazi_kategori = ?,
+              yazi_kategori_link = ?,
               yazi_adi = ?,
               yazi_yazarId = ?,
               yazi_link = ?,
@@ -70,6 +72,7 @@ if ($_POST["kayitet"]) {
               ");
               $insert=$query->execute(array(
                 $yazi_kategori,
+                $yazi_kategori_link,
                 $yazi_adi,
                 $yazi_yazarId,
                 $yazi_link,
@@ -130,6 +133,7 @@ if ($_POST["kayitet"]) {
     }else if($yazi_iconResmi==""){
         $query=$db->prepare("INSERT INTO yazilar SET
           yazi_kategori = ?,
+          yazi_kategori_link = ?,
           yazi_adi = ?,
           yazi_yazarId = ?,
           yazi_link = ?,
@@ -143,6 +147,7 @@ if ($_POST["kayitet"]) {
           ");
           $insert=$query->execute(array(
             $yazi_kategori,
+            $yazi_kategori_link,
             $yazi_adi,
             $yazi_yazarId,
             $yazi_link,
@@ -259,7 +264,7 @@ if ($_POST["kayitet"]) {
               filebrowserFlashBrowseUrl : '/ckfinder/ckfinder.html?type=Flash',
               filebrowserUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
               filebrowserImageUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-              filebrowserFlashUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash', 
+              filebrowserFlashUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
             });
             </script>
                 </div>
